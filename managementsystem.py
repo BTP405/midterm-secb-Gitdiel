@@ -24,7 +24,9 @@ class ManagementSystem:
         """
         Initialize a ManagementSystem object.
         """
-        pass
+        self.employees = []
+        self.projects = []
+        self.tasks = []
 
     def add_employee(self, employee):
         """
