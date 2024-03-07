@@ -78,4 +78,15 @@ class ManagementSystem:
         Raises:
             ValueError: If employee or project is not found.
         """
-        self.projects[project_id].assign_employee(self.employees[emp_id])
+        emp_index = -1
+        project_index = -1
+        for x in range(len(self.employees)):
+            if self.employees[x].emp_id == emp_id:
+                emp_index = x
+        for x in range(len(self.projects)):
+            if self.projects[x].project_id == project_id:
+                project_index = x
+        if emp_index == -1 || project_index == -1:
+            raise ValueError
+        else:
+            self.projects[project_index].append(self.employees[emp_index])
