@@ -75,4 +75,4 @@ class ManagementSystem:
         Raises:
             ValueError: If employee or project is not found.
         """
-        self.projects.add_employee(self.employees[emp_id])
+        self.projects[project_id].assign_employee(self.employees[emp_id])
