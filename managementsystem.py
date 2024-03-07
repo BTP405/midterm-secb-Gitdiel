@@ -44,7 +44,10 @@ class ManagementSystem:
         Args:
             emp_id (str): The ID of the employee to be removed.
         """
-        self.employees.remove(emp_id)
+        for x in range(len(self.employees))
+            if self.employees[x].emp_id == emp_id:
+                self.employees.remove(x)
+                
 
     def add_project(self, project):
         """
