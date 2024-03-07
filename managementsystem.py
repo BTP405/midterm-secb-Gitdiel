@@ -86,9 +86,7 @@ class ManagementSystem:
         for x in range(len(self.projects)):
             if self.projects[x].project_id == project_id:
                 project_index = x
-        if emp_index == -1:
-            raise ValueError
-        elif project_index == -1:
+        if emp_index == -1 or project_index == -1:
             raise ValueError
         else:
             self.projects[project_index].assign_employee(self.employees[emp_index])
