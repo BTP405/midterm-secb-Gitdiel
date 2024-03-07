@@ -35,7 +35,7 @@ class ManagementSystem:
         Args:
             employee (Employee): The employee to be added.
         """
-        pass
+        self.employees.append(employee)
 
     def remove_employee(self, emp_id):
         """
@@ -44,7 +44,7 @@ class ManagementSystem:
         Args:
             emp_id (str): The ID of the employee to be removed.
         """
-        pass
+        self.employees.remove(emp_id)
 
     def add_project(self, project):
         """
@@ -53,7 +53,7 @@ class ManagementSystem:
         Args:
             project (Project): The project to be added.
         """
-        pass
+        self.projects.append(project)
 
     def add_task(self, task):
         """
@@ -62,7 +62,7 @@ class ManagementSystem:
         Args:
             task (Task): The task to be added.
         """
-        pass
+        self.tasks.append(task)
 
     def assign_employee_to_project(self, emp_id, project_id):
         """
@@ -75,4 +75,4 @@ class ManagementSystem:
         Raises:
             ValueError: If employee or project is not found.
         """
-        pass
+        self.projects.add_employee(self.employees[emp_id])
