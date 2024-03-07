@@ -46,7 +46,7 @@ class ManagementSystem:
         """
         for x in range(len(self.employees)):
             if self.employees[x].emp_id == emp_id:
-                self.employees.remove(x)
+                self.employees.pop(x)
                 
 
     def add_project(self, project):
@@ -91,4 +91,4 @@ class ManagementSystem:
         elif project_index == -1:
             raise ValueError
         else:
-            self.projects[project_index].append(self.employees[emp_index])
+            self.projects[project_index].assign_employee(self.employees[emp_index])
