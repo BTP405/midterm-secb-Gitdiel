@@ -33,6 +33,7 @@ class Project:
         self.description = description
         self.start_date = start_date
         self.end_date = end_date
+        self.employees = []
 
     def assign_employee(self, employee):
         """
@@ -41,4 +42,4 @@ class Project:
         Args:
             employee (Employee): The employee to be assigned to the project.
         """
-        self.employee = employee
+        self.employees.append(employee)
